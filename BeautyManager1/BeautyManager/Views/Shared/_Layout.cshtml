@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Beauty Manager | Салон Мармара</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ПАСТЕЛЬНАЯ ПАЛИТРА */
+        :root {
+            --cream: #fff3e6;      /* кремовый */
+            --peach: #ffdad2;       /* персиковый */
+            --powder: #f8d7da;      /* пудровый */
+            --mint: #d4f0f0;        /* мятный */
+            --light-lavender: #e6e0f0; /* светло-лавандовый */
+            --light-blue: #d4e4f7;   /* нежно-голубой */
+            --dusty-rose: #dbb8b8;   /* приглушенный розовый */
+            --sage: #e0e6d4;        /* шалфейный */
+            --text-dark: #5a4e4a;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--light-lavender) 100%);
+            color: var(--text-dark);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ШАПКА */
+        header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.03);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(219, 184, 184, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 32px;
+            color: var(--dusty-rose);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            font-size: 14px;
+            color: var(--text-dark);
+            opacity: 0.7;
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: var(--dusty-rose);
+        }
+
+        /* КНОПКИ */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, var(--dusty-rose), #c9a3a3);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(219, 184, 184, 0.3);
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #c9a3a3, #b89191);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(219, 184, 184, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--dusty-rose);
+            color: var(--dusty-rose);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: var(--dusty-rose);
+            color: white;
+            border-color: var(--dusty-rose);
+        }
+
+        /* КАРТОЧКИ */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(219, 184, 184, 0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(219, 184, 184, 0.15);
+        }
+
+        .card-image {
+            height: 150px;
+            background: linear-gradient(135deg, var(--light-blue), var(--peach));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dusty-rose);
+            font-size: 48px;
+            border-bottom: 1px solid rgba(219, 184, 184, 0.2);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            color: var(--dusty-rose);
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            color: var(--text-dark);
+            opacity: 0.8;
+        }
+
+        .card-price {
+            font-size: 24px;
+            color: var(--dusty-rose);
+            margin: 10px 0;
+        }
+
+        /* ФОРМЫ */
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(219, 184, 184, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid rgba(219, 184, 184, 0.3);
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s;
+            color: var(--text-dark);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--dusty-rose);
+            background: white;
+            box-shadow: 0 0 0 3px rgba(219, 184, 184, 0.1);
+        }
+
+        select.form-control {
+            cursor: pointer;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23dbb8b8'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 20px;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            padding-right: 40px;
+        }
+
+        select.form-control option {
+            background: white;
+            color: var(--text-dark);
+            padding: 10px;
+        }
+
+        /* ЗАГОЛОВКИ */
+        .page-title {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .page-title h2 {
+            font-size: 42px;
+            background: linear-gradient(135deg, var(--dusty-rose), #b89191);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .page-title p {
+            color: var(--text-dark);
+            opacity: 0.7;
+            font-size: 18px;
+        }
+
+        /* ФУТЕР */
+        footer {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-dark);
+            border-top: 1px solid rgba(219, 184, 184, 0.2);
+            margin-top: 60px;
+        }
+
+        footer p {
+            color: var(--text-dark);
+            opacity: 0.7;
+        }
+
+        footer i {
+            color: var(--dusty-rose);
+        }
+
+        /* ТАБЛИЦЫ */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(219, 184, 184, 0.2);
+        }
+
+        th {
+            background: var(--dusty-rose);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(219, 184, 184, 0.2);
+            color: var(--text-dark);
+        }
+
+        tr:hover {
+            background: rgba(219, 184, 184, 0.05);
+        }
+
+        a {
+            color: var(--dusty-rose);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #b89191;
+            text-decoration: underline;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--dusty-rose);
+        }
+
+        p {
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Beauty Manager</h1>
+                <span>Салон красоты МАРМАРА</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">Главная</a></li>
+                    <li><a href="@Url.Action("About", "Home")">О салоне</a></li>
+                    <li><a href="@Url.Action("Index", "Services")">Услуги</a></li>
+                    <li><a href="@Url.Action("Index", "Masters")">Мастера</a></li>
+                    <li><a href="@Url.Action("Schedule", "Appointment")">Расписание</a></li>
+                    <li><a href="@Url.Action("Create", "Appointment")">Записаться</a></li>
+                    <li><a href="@Url.Action("Contact", "Home")">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            @RenderBody()
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Beauty Manager - Салон красоты МАРМАРА</p>
+            <p style="margin-top: 10px;">
+                <i class="fas fa-phone"></i> +7 (999) 123-45-67 | 
+                <i class="fas fa-envelope"></i> info@marmara.ru |
+                <i class="fas fa-map-marker-alt"></i> ул. Красоты, д. 10
+            </p>
+        </div>
+    </footer>
+    <!-- Подключаем jQuery для AJAX -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

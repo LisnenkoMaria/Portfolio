@@ -1,0 +1,170 @@
+﻿@model BeautyManager.Models.Appointment
+
+@{
+    ViewData["Title"] = "Запись онлайн";
+}
+
+<div class="page-title">
+    <h2>Запись на процедуру</h2>
+    <p>Заполните форму для записи</p>
+</div>
+
+<div class="form-container">
+    <form action="/Appointment/Create" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="form-group">
+            <label asp-for="ClientName">Ваше имя</label>
+            <input asp-for="ClientName" class="form-control" placeholder="Введите ваше имя" required />
+            <span asp-validation-for="ClientName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ClientPhone">Телефон</label>
+            <input asp-for="ClientPhone" class="form-control" placeholder="+7 (999) 123-45-67" required />
+            <span asp-validation-for="ClientPhone" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ClientEmail">Email</label>
+            <input asp-for="ClientEmail" class="form-control" placeholder="email@example.com" />
+            <span asp-validation-for="ClientEmail" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ServiceId">Выберите услугу</label>
+            <select asp-for="ServiceId" class="form-control" id="serviceSelect">
+                <option value="">-- Выберите услугу --</option>
+                @if (ViewBag.Services != null)
+                {
+                    foreach (var service in ViewBag.Services)
+                    {
+                        if (service.Value == Model.ServiceId.ToString())
+                        {
+                            <option value="@service.Value" selected>@service.Text</option>
+                        }
+                        else
+                        {
+                            <option value="@service.Value">@service.Text</option>
+                        }
+                    }
+                }
+            </select>
+            <span asp-validation-for="ServiceId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="MasterId">Выберите мастера</label>
+            <select asp-for="MasterId" class="form-control" id="masterSelect">
+                <option value="">-- Сначала выберите услугу --</option>
+            </select>
+            <span asp-validation-for="MasterId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="AppointmentDate">Дата</label>
+            <input asp-for="AppointmentDate" class="form-control" type="date" min="@DateTime.Now.ToString("yyyy-MM-dd")" required />
+            <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="AppointmentTime">Время</label>
+            <input asp-for="AppointmentTime" class="form-control" type="time" required />
+            <span asp-validation-for="AppointmentTime" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Notes">Комментарий</label>
+            <textarea asp-for="Notes" class="form-control" rows="3" placeholder="Дополнительные пожелания"></textarea>
+            <span asp-validation-for="Notes" class="text-danger"></span>
+        </div>
+
+        <div style="text-align: center;">
+            <button type="submit" class="btn">Записаться</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceSelect = document.getElementById('serviceSelect');
+            const masterSelect = document.getElementById('masterSelect');
+            
+            if (!serviceSelect || !masterSelect) return;
+            
+            serviceSelect.addEventListener('change', function() {
+                const serviceId = this.value;
+                
+                if (!serviceId) {
+                    masterSelect.innerHTML = '<option value="">-- Сначала выберите услугу --</option>';
+                    return;
+                }
+                
+                masterSelect.innerHTML = '<option value="">Загрузка мастеров...</option>';
+                
+                fetch(`/Appointment/GetMastersByService?serviceId=${serviceId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        masterSelect.innerHTML = '<option value="">-- Выберите мастера --</option>';
+                        
+                        if (data.length === 0) {
+                            masterSelect.innerHTML += '<option value="">Нет доступных мастеров</option>';
+                        } else {
+                            data.forEach(master => {
+                                const option = document.createElement('option');
+                                option.value = master.value;
+                                option.textContent = master.text;
+                                masterSelect.appendChild(option);
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Ошибка:', error);
+                        masterSelect.innerHTML = '<option value="">Ошибка загрузки мастеров</option>';
+                    });
+            });
+            
+            const initialServiceId = '@Model.ServiceId';
+            if (initialServiceId && initialServiceId !== '0') {
+                serviceSelect.value = initialServiceId;
+                const event = new Event('change');
+                serviceSelect.dispatchEvent(event);
+            }
+        });
+    </script>
+}
+<script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Останавливаем обычную отправку
+
+        var formData = new FormData(this);
+
+        fetch('/Appointment/Create', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.redirected) {
+                window.location.href = response.url;
+            } else {
+                window.location.href = '/Appointment/Success';
+            }
+        })
+        .catch(error => {
+            window.location.href = '/Appointment/Success';
+        });
+    });
+</script>
+<script>
+    document.querySelector('#appointmentForm').addEventListener('submit', function(e) {
+        // НИЧЕГО НЕ БЛОКИРУЕМ, ПРОСТО ЛОГИРУЕМ
+        console.log('Форма отправляется...');
+        
+       
+    });
+</script>

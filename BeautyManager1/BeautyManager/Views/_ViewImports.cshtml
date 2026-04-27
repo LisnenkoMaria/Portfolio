@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Beauty Manager | Салон Мармара</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        /* ОСНОВНЫЕ СТИЛИ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #faf0e6; /* бежевый */
+            color: #5a4e4a;
+            line-height: 1.6;
+        }
+
+        /* ПАСТЕЛЬНАЯ ПАЛИТРА */
+        :root {
+            --beige: #f5e6d3;
+            --powder: #f8d7da;
+            --light-blue: #d4e4f7;
+            --dusty-rose: #dbb8b8;
+            --warm-gray: #a89f9b;
+            --white: #ffffff;
+            --text-dark: #5a4e4a;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ШАПКА */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            padding: 20px 0;
+            border-bottom: 3px solid var(--dusty-rose);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 32px;
+            color: var(--dusty-rose);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            font-size: 14px;
+            color: var(--warm-gray);
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            color: var(--dusty-rose);
+        }
+
+        /* КНОПКИ */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--dusty-rose);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: #c9a3a3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(219, 184, 184, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--dusty-rose);
+            color: var(--dusty-rose);
+        }
+
+        .btn-outline:hover {
+            background: var(--dusty-rose);
+            color: white;
+        }
+
+        /* КАРТОЧКИ */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-image {
+            height: 150px;
+            background: linear-gradient(135deg, var(--light-blue), var(--powder));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dusty-rose);
+            font-size: 48px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 22px;
+            color: var(--dusty-rose);
+            margin-bottom: 10px;
+        }
+
+        .card-price {
+            font-size: 24px;
+            color: var(--dusty-rose);
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+        /* ФОРМЫ */
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #f0e4e4;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--dusty-rose);
+        }
+
+        select.form-control {
+            background-color: white;
+        }
+
+        /* ЗАГОЛОВКИ СТРАНИЦ */
+        .page-title {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .page-title h2 {
+            font-size: 36px;
+            color: var(--dusty-rose);
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            color: var(--warm-gray);
+            font-size: 18px;
+        }
+
+        /* ФУТЕР */
+        footer {
+            background: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            color: var(--warm-gray);
+            border-top: 1px solid #f0e4e4;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <h1>Beauty Manager</h1>
+                <span>Салон красоты МАРМАРА</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">Главная</a></li>
+                    <li><a href="@Url.Action("About", "Home")">О салоне</a></li>
+                    <li><a href="@Url.Action("Index", "Services")">Услуги</a></li>
+                    <li><a href="@Url.Action("Index", "Masters")">Мастера</a></li>
+                    <li><a href="@Url.Action("Schedule", "Appointment")">Расписание</a></li>
+                    <li><a href="@Url.Action("Create", "Appointment")">Записаться</a></li>
+                    <li><a href="@Url.Action("Contact", "Home")">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            @RenderBody()
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Beauty Manager - Салон красоты МАРМАРА</p>
+            <p style="margin-top: 10px;">
+                <i class="fas fa-phone"></i> +7 (999) 123-45-67 |
+                <i class="fas fa-envelope"></i> info@marmara.ru |
+                <i class="fas fa-map-marker-alt"></i> ул. Пушкина, д. 10
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

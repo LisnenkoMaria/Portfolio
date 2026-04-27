@@ -1,0 +1,29 @@
+﻿@model IEnumerable<BeautyManager.Models.Service>
+
+@{
+    ViewData["Title"] = "Услуги";
+}
+
+<div class="page-title">
+    <h2>Наши услуги</h2>
+    <p>Выберите процедуру для записи</p>
+</div>
+
+<div class="card-grid">
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <div class="card-image">
+                <i class="fas fa-spa"></i>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">@item.Name</h3>
+                <p>@item.Description</p>
+                <p><small>Длительность: @item.Duration мин.</small></p>
+                <p><small>Категория: @item.Category</small></p>
+                <p class="card-price">@item.Price.ToString("C0")</p>
+                <a href="@Url.Action("Create", "Appointment", new { serviceId = item.Id })" class="btn">Записаться</a>
+            </div>
+        </div>
+    }
+</div>

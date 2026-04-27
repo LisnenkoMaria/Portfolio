@@ -1,0 +1,29 @@
+﻿@model IEnumerable<BeautyManager.Models.Master>
+
+@{
+    ViewData["Title"] = "Наши мастера";
+}
+
+<div class="page-title">
+    <h2>Наши специалисты</h2>
+    <p>Профессионалы с многолетним опытом</p>
+</div>
+
+<div class="card-grid">
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <div class="card-image">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">@item.Name</h3>
+                <p><strong style="color: var(--dusty-rose);">@item.Specialization</strong></p>
+                <p style="color: var(--text-dark); opacity: 0.8;">@item.Bio</p>
+                <p style="color: var(--text-dark); opacity: 0.7;"><small>Рабочие дни: @item.WorkDays</small></p>
+                <p style="color: var(--text-dark); opacity: 0.7;"><small>Время: @item.WorkHours</small></p>
+                <a href="@Url.Action("Create", "Appointment", new { masterId = item.Id })" class="btn" style="margin-top: 10px;">Записаться к мастеру</a>
+            </div>
+        </div>
+    }
+</div>
