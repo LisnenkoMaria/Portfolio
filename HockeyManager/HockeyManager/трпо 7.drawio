@@ -1,0 +1,127 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0" version="28.2.5">
+  <diagram name="Страница 1" id="2cc2d294-239b-6880-179f-bad3f57eafd7">
+    <mxGraphModel dx="1273" dy="1835" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;ERD ДИАГРАММА: БАЗА ДАННЫХ ХОККЕЙНЫХ НАПАДАЮЩИХ&lt;/b&gt;&lt;br&gt;Система учета информации о 10 нападающих хоккеистах города" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="170" y="-120" width="500" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#66B2FF;exitX=0.128;exitY=1.009;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.181;entryY=-0.009;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="striker" target="team_history">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="159.5" y="220" as="sourcePoint" />
+            <mxPoint x="160" y="1100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="striker" value="&lt;b&gt;НАПАДАЮЩИЕ&lt;/b&gt;&lt;br&gt;&lt;br&gt;ID_игрока (PK)&lt;br&gt;Фамилия&lt;br&gt;Имя&lt;br&gt;Отчество&lt;br&gt;Дата_рождения&lt;br&gt;Гражданство&lt;br&gt;Рост&lt;br&gt;Вес&lt;br&gt;Амплуа&lt;br&gt;Статус_игрока&lt;br&gt;Телефон&lt;br&gt;Email" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;" parent="1" vertex="1">
+          <mxGeometry x="130" y="-30" width="220" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="stats" value="&lt;b&gt;СТАТИСТИКА&lt;/b&gt;&lt;br&gt;&lt;br&gt;ID_статистики (PK)&lt;br&gt;ID_игрока (FK)&lt;br&gt;Сезон&lt;br&gt;Лига&lt;br&gt;Количество_игр&lt;br&gt;Голы&lt;br&gt;Голевые_передачи&lt;br&gt;Очки&lt;br&gt;Штрафные_минуты&lt;br&gt;Плюс_минус&lt;br&gt;Броски_по_воротам&lt;br&gt;%_реализации&lt;br&gt;Время_на_площадке" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;" parent="1" vertex="1">
+          <mxGeometry x="360" y="-50" width="220" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="teams" value="&lt;b&gt;КОМАНДЫ&lt;/b&gt;&lt;br&gt;&lt;br&gt;ID_команды (PK)&lt;br&gt;Название_команды&lt;br&gt;Город&lt;br&gt;Лига&lt;br&gt;Дивизион&lt;br&gt;Главный_тренер&lt;br&gt;Тренер_нападающих&lt;br&gt;Год_основания&lt;br&gt;Стадион&lt;br&gt;Вместимость&lt;br&gt;Телефон&lt;br&gt;Сайт" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;" parent="1" vertex="1">
+          <mxGeometry x="590" y="-30" width="220" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="contracts" value="&lt;b&gt;КОНТРАКТЫ&lt;/b&gt;&lt;br&gt;&lt;br&gt;ID_контракта (PK)&lt;br&gt;ID_игрока (FK)&lt;br&gt;ID_команды (FK)&lt;br&gt;Тип_контракта&lt;br&gt;Дата_начала&lt;br&gt;Дата_окончания&lt;br&gt;Зарплата&lt;br&gt;Бонусы_за_голы&lt;br&gt;Бонусы_за_победы&lt;br&gt;Статус_контракта&lt;br&gt;Агент&lt;br&gt;Условия_расторжения" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;" parent="1" vertex="1">
+          <mxGeometry x="210" y="320" width="220" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="injuries" value="&lt;b&gt;ТРАВМЫ&lt;/b&gt;&lt;br&gt;&lt;br&gt;ID_травмы (PK)&lt;br&gt;ID_игрока (FK)&lt;br&gt;Вид_травмы&lt;br&gt;Локализация&lt;br&gt;Дата_травмы&lt;br&gt;Дата_восстановления&lt;br&gt;Степень_тяжести&lt;br&gt;Статус&lt;br&gt;Врач&lt;br&gt;Клиника&lt;br&gt;Реабилитация&lt;br&gt;Примечания" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;" parent="1" vertex="1">
+          <mxGeometry x="210" y="630" width="220" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="training" value="&lt;b&gt;ТРЕНИРОВКИ&lt;/b&gt;&lt;br&gt;&lt;br&gt;ID_тренировки (PK)&lt;br&gt;ID_игрока (FK)&lt;br&gt;Дата_тренировки&lt;br&gt;Тип_тренировки&lt;br&gt;Продолжительность&lt;br&gt;Интенсивность&lt;br&gt;Тренер&lt;br&gt;Место_тренировки&lt;br&gt;Упражнения&lt;br&gt;Результат&lt;br&gt;Рекомендации&lt;br&gt;Следующая_тренировка" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;" parent="1" vertex="1">
+          <mxGeometry x="440" y="630" width="220" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="achievements" value="&lt;b&gt;ДОСТИЖЕНИЯ&lt;/b&gt;&lt;br&gt;&lt;br&gt;ID_достижения (PK)&lt;br&gt;ID_игрока (FK)&lt;br&gt;Турнир&lt;br&gt;Награда&lt;br&gt;Сезон&lt;br&gt;Место&lt;br&gt;Описание&lt;br&gt;Дата_получения&lt;br&gt;Организатор&lt;br&gt;Призовые&lt;br&gt;Статус_награды" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;" parent="1" vertex="1">
+          <mxGeometry x="670" y="630" width="220" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="scouting" value="&lt;b&gt;СКАУТИНГ&lt;/b&gt;&lt;br&gt;&lt;br&gt;ID_отчета (PK)&lt;br&gt;ID_игрока (FK)&lt;br&gt;Скаут&lt;br&gt;Дата_отчета&lt;br&gt;Организация&lt;br&gt;Сильные_стороны&lt;br&gt;Слабые_стороны&lt;br&gt;Потенциал&lt;br&gt;Рекомендации&lt;br&gt;Оценка_от_1_до_10&lt;br&gt;Перспективы_роста&lt;br&gt;Дата_след_просмотра" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;" parent="1" vertex="1">
+          <mxGeometry x="210" y="929" width="220" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="team_history" value="&lt;b&gt;ИСТОРИЯ_КОМАНД&lt;/b&gt;&lt;br&gt;&lt;br&gt;ID_записи (PK)&lt;br&gt;ID_игрока (FK)&lt;br&gt;ID_команды (FK)&lt;br&gt;Период_начала&lt;br&gt;Период_окончания&lt;br&gt;Роль_в_команде&lt;br&gt;Игровой_номер&lt;br&gt;Статистика_за_период&lt;br&gt;Причина_ухода&lt;br&gt;Достижения_в_команде" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#2E7D32;" parent="1" vertex="1">
+          <mxGeometry x="120" y="1200" width="220" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-2" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="stats">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="290" as="sourcePoint" />
+            <mxPoint x="440" y="210" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="410" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-3" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.143;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="contracts">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="360" as="sourcePoint" />
+            <mxPoint x="440" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.988;exitY=0.155;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="contracts" target="teams">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="260" as="sourcePoint" />
+            <mxPoint x="440" y="210" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="680" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-5" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.006;entryY=0.278;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="injuries">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="710" as="sourcePoint" />
+            <mxPoint x="440" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-6" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.003;entryY=0.123;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="scouting">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="960" as="sourcePoint" />
+            <mxPoint x="200" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-7" value="&lt;pre style=&quot;font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; font-size: 13px; line-height: 22px; font-family: Menlo, Monaco, &amp;quot;Cascadia Mono&amp;quot;, Consolas, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; overflow: auto; text-wrap-mode: wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); text-align: start; margin: 0px !important;&quot;&gt;имеет (1:1)&lt;/pre&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="140" y="260" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-8" value="&lt;pre style=&quot;font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; font-size: 13px; line-height: 22px; font-family: Menlo, Monaco, &amp;quot;Cascadia Mono&amp;quot;, Consolas, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; overflow: auto; text-wrap-mode: wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); text-align: start; margin: 0px !important;&quot;&gt; подписывает (1:M)&lt;/pre&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="330" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-9" value="&lt;pre style=&quot;font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; font-size: 13px; line-height: 22px; font-family: Menlo, Monaco, &amp;quot;Cascadia Mono&amp;quot;, Consolas, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; overflow: auto; text-wrap-mode: wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); text-align: start; margin: 0px !important;&quot;&gt;заключает (1:M)&lt;/pre&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="420" y="330" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-10" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, &amp;quot;Cascadia Mono&amp;quot;, Consolas, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;получает (1:M)&lt;/pre&gt;&#xa;&#xa;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="390" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-11" value="&#xa;&lt;pre style=&quot;font: 400 13px / 22px Menlo, Monaco, &amp;quot;Cascadia Mono&amp;quot;, Consolas, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; margin: 0px !important; overflow: auto; white-space: pre-wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;проходит (1:M)&lt;/pre&gt;&#xa;&#xa;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="450" y="450" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-12" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;size=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="380" width="20" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="kt1XpWDT-jr2VcDkT2jM-10" target="kt1XpWDT-jr2VcDkT2jM-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-16" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;size=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="440" width="20" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-17" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;size=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="480" width="20" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-19" value="&lt;pre style=&quot;font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; font-size: 13px; line-height: 22px; font-family: Menlo, Monaco, &amp;quot;Cascadia Mono&amp;quot;, Consolas, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; overflow: auto; text-wrap-mode: wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); text-align: start; margin: 0px !important;&quot;&gt;оценивается (1:M)&lt;/pre&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="450" y="490" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-20" value="&lt;pre style=&quot;font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; font-size: 13px; line-height: 22px; font-family: Menlo, Monaco, &amp;quot;Cascadia Mono&amp;quot;, Consolas, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; overflow: auto; text-wrap-mode: wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); text-align: start; margin: 0px !important;&quot;&gt;играет в (M:N)&lt;/pre&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="155" y="1170" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-21" value="&lt;span style=&quot;color: rgb(15, 17, 21); font-family: Menlo, Monaco, &amp;quot;Cascadia Mono&amp;quot;, Consolas, &amp;quot;Ubuntu Mono&amp;quot;, &amp;quot;DejaVu Sans Mono&amp;quot;, &amp;quot;Liberation Mono&amp;quot;, &amp;quot;JetBrains Mono&amp;quot;, &amp;quot;Fira Code&amp;quot;, Cousine, &amp;quot;Roboto Mono&amp;quot;, &amp;quot;Courier New&amp;quot;, Courier, sans-serif, system-ui; font-size: 13px; text-align: start; background-color: transparent;&quot;&gt;включает (M:N)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="1410" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-23" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.195;entryY=1.013;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="team_history">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="163" y="1460" as="sourcePoint" />
+            <mxPoint x="440" y="1410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kt1XpWDT-jr2VcDkT2jM-24" value="&lt;pre style=&quot;font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-variant-emoji: normal; font-stretch: normal; line-height: 22px; overflow: auto; text-wrap-mode: wrap; word-break: break-all; padding: 16px; color: rgb(15, 17, 21); text-align: start; margin: 0px !important;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot; face=&quot;Times New Roman&quot;&gt;КОМАНДЫ &lt;/font&gt;(повторно для наглядности)&lt;/pre&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1460" width="160" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,150 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0" version="28.2.5">
+  <diagram name="Страница 1" id="2cc2d294-239b-6880-179f-bad3f57eafd7">
+    <mxGraphModel dx="2100" dy="666" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;DFD ДИАГРАММА: СИСТЕМА УПРАВЛЕНИЯ ХОККЕЙНЫМИ НАПАДАЮЩИМИ&lt;/b&gt;&lt;br&gt;Диаграмма потоков данных (уровень 0)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="200" y="10" width="500" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" value="&lt;b&gt;Администратор&lt;/b&gt;" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-40" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="coach" value="&lt;b&gt;Тренер&lt;/b&gt;" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-150" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="doctor" value="&lt;b&gt;Врач&lt;/b&gt;" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-150" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="scout" value="&lt;b&gt;Скаут&lt;/b&gt;" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="800" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="player" value="&lt;b&gt;Игрок&lt;/b&gt;" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="-40" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="management" value="&lt;b&gt;Руководство&lt;/b&gt;" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="820" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="process1" value="&lt;b&gt;1.0&lt;/b&gt;&lt;br&gt;Управление данными&lt;br&gt;игроков" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="220" y="90" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="process2" value="&lt;b&gt;2.0&lt;/b&gt;&lt;br&gt;Обработка&lt;br&gt;статистики" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="310" y="210" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="process3" value="&lt;b&gt;3.0&lt;/b&gt;&lt;br&gt;Управление&lt;br&gt;контрактами" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="180" y="590" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="process5" value="&lt;b&gt;5.0&lt;/b&gt;&lt;br&gt;Анализ и&lt;br&gt;отчетность" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="200" y="330" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="store1" value="&lt;b&gt;База игроков&lt;/b&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="570" y="90" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="store2" value="&lt;b&gt;Статистика&lt;/b&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="570" y="220" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="store3" value="&lt;b&gt;Контракты&lt;/b&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="570" y="410" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="store4" value="&lt;b&gt;Медкарты&lt;/b&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="570" y="585" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="flow1" value="Данные игроков" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#000000;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="admin" target="process1" edge="1">
+          <mxGeometry x="0.0047" y="-13" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow2" value="Игровая статистика" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="coach" target="process2" edge="1">
+          <mxGeometry x="-0.5272" y="17" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow3" value="Медосмотры, травмы" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="doctor" target="process4" edge="1">
+          <mxGeometry x="-0.6835" y="-24" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow4" value="Личная информация" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="player" target="process1" edge="1">
+          <mxGeometry x="-0.9866" y="56" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow6" value="Условия контрактов" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="management" edge="1">
+          <mxGeometry x="-0.7691" y="24" relative="1" as="geometry">
+            <mxPoint x="310" y="620" as="targetPoint" />
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow7" value="Обновление данных" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="process1" target="store1" edge="1">
+          <mxGeometry x="0.0394" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow8" value="Запрос данных" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="store1" target="process1" edge="1">
+          <mxGeometry x="0.2133" y="-15" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow9" value="Сохранение статистики" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="process2" target="store2" edge="1">
+          <mxGeometry y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow10" value="Анализ статистики" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="store2" target="process5" edge="1">
+          <mxGeometry x="-0.3403" y="-23" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow11" value="Регистрация контракта" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#000000;" parent="1" target="store3" edge="1">
+          <mxGeometry x="-0.9262" y="40" relative="1" as="geometry">
+            <mxPoint x="310" y="610" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow12" value="Информация о контрактах" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="store3" target="process5" edge="1">
+          <mxGeometry x="-0.12" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow13" value="Запись медданных" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#000000;" parent="1" target="store4" edge="1">
+          <mxGeometry x="0.1324" y="-21" relative="1" as="geometry">
+            <mxPoint x="400" y="550" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow14" value="Медицинская история" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="store4" target="process5" edge="1">
+          <mxGeometry x="-0.8997" y="-22" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow15" value="Аналитические отчеты" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="process5" target="management" edge="1">
+          <mxGeometry x="-0.1213" y="10" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="380" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow16" value="Рекомендации по игрокам" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="process5" target="scout" edge="1">
+          <mxGeometry x="0.5736" y="-16" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow17" value="Тренировочные планы" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="process5" target="coach" edge="1">
+          <mxGeometry x="-0.0814" y="-19" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flow18" value="Медрекомендации" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#000000;" parent="1" source="process5" target="doctor" edge="1">
+          <mxGeometry x="0.4718" y="-13" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="process4" value="&lt;b&gt;4.0&lt;/b&gt;&lt;br&gt;Медицинский&lt;br&gt;учет" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="320" y="460" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,175 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0" version="26.2.14">
+  <diagram name="Полная система сбора данных о хоккеистах" id="bpmn-full-swimlanes">
+    <mxGraphModel dx="107029" dy="79516" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pool1" value="Полная система управления данными о хоккеистах" style="swimlane;whiteSpace=wrap;html=1;startSize=80;fillColor=#FFE6CC;" parent="1" vertex="1">
+          <mxGeometry x="20" y="20" width="2020" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="lane1" value="Администратор системы" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FFFFFF;" parent="pool1" vertex="1">
+          <mxGeometry y="80" width="2010" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="start" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF9999;strokeColor=#000000;strokeWidth=2;" parent="lane1" vertex="1">
+          <mxGeometry x="50" y="35" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="task_admin1" value="Инициализация проекта" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane1" vertex="1">
+          <mxGeometry x="100" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="task_admin2" value="Определение критериев отбора" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane1" vertex="1">
+          <mxGeometry x="240" y="40" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="task_admin3" value="Назначение ответственных" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane1" vertex="1">
+          <mxGeometry x="400" y="30" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gateway_admin" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFCC;" parent="lane1" vertex="1">
+          <mxGeometry x="550" y="32" width="40" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="note_criteria" value="Критерии: возраст, стаж, голы, передачи, +/-" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="lane1" vertex="1">
+          <mxGeometry x="220" y="20" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2" value="Сотрудник по сбору данных" style="swimlane;whiteSpace=wrap;html=1;" parent="pool1" vertex="1">
+          <mxGeometry y="180" width="2010" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="task_data1" value="Сбор данных из открытых источников" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane2" vertex="1">
+          <mxGeometry x="100" y="30" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="task_data2" value="Запрос информации у клубов" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane2" vertex="1">
+          <mxGeometry x="270" y="30" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="task_data3" value="Интервью с тренерами" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane2" vertex="1">
+          <mxGeometry x="420" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="task_data4" value="Первичная проверка данных" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane2" vertex="1">
+          <mxGeometry x="560" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gateway_data" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFCC;" parent="lane2" vertex="1">
+          <mxGeometry x="700" y="32" width="40" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="event_data_error" value="Данные неполные" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFCDD2;strokeColor=#D32F2F;strokeWidth=2;" parent="lane2" vertex="1">
+          <mxGeometry x="760" y="20" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="event_data_ok" value="Данные полные" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#C8E6C9;strokeColor=#388E3C;strokeWidth=2;" parent="lane2" vertex="1">
+          <mxGeometry x="760" y="50" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="task_data_correction" value="Корректировка данных" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane2" vertex="1">
+          <mxGeometry x="810" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lane3" value="Аналитик данных" style="swimlane;whiteSpace=wrap;html=1;" parent="pool1" vertex="1">
+          <mxGeometry y="280" width="2010" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="task_analyst1" value="Загрузка данных в систему" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane3" vertex="1">
+          <mxGeometry x="800" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="task_analyst2" value="Статистический анализ" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane3" vertex="1">
+          <mxGeometry x="940" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="task_analyst3" value="Сравнительная оценка" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane3" vertex="1">
+          <mxGeometry x="1080" y="30" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="task_analyst4" value="Ранжирование игроков" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane3" vertex="1">
+          <mxGeometry x="1230" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gateway_analyst" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFCC;" parent="lane3" vertex="1">
+          <mxGeometry x="1370" y="32" width="40" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="lane4" value="Редактор отчета" style="swimlane;whiteSpace=wrap;html=1;" parent="pool1" vertex="1">
+          <mxGeometry y="380" width="2010" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="task_editor1" value="Подготовка структуры отчета" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane4" vertex="1">
+          <mxGeometry x="1100" y="30" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="task_editor2" value="Наполнение контентом" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane4" vertex="1">
+          <mxGeometry x="1260" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="task_editor3" value="Добавление графиков" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane4" vertex="1">
+          <mxGeometry x="1400" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="task_editor4" value="Редакторская проверка" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane4" vertex="1">
+          <mxGeometry x="1540" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lane5" value="IT-специалист" style="swimlane;whiteSpace=wrap;html=1;" parent="pool1" vertex="1">
+          <mxGeometry y="480" width="2010" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="task_it1" value="Техническая проверка" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane5" vertex="1">
+          <mxGeometry x="1300" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="task_it2" value="Публикация на сайте" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane5" vertex="1">
+          <mxGeometry x="1440" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="task_it3" value="Настройка рассылки" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane5" vertex="1">
+          <mxGeometry x="1580" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="end" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FF9999;strokeColor=#000000;strokeWidth=3;" parent="lane5" vertex="1">
+          <mxGeometry x="1720" y="35" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lane6" value="Система управления базами данных" style="swimlane;whiteSpace=wrap;html=1;" parent="pool1" vertex="1">
+          <mxGeometry y="580" width="2010" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="task_db1" value="Создание структуры БД" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane6" vertex="1">
+          <mxGeometry x="100" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="task_db2" value="Хранение сырых данных" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane6" vertex="1">
+          <mxGeometry x="240" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="task_db3" value="Обработка запросов" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane6" vertex="1">
+          <mxGeometry x="380" y="30" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="db_main" value="Основная БД" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="lane6" vertex="1">
+          <mxGeometry x="510" y="25" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="task_db4" value="Резервное копирование" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane6" vertex="1">
+          <mxGeometry x="610" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="db_archive" value="Архивная БД" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="lane6" vertex="1">
+          <mxGeometry x="750" y="25" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="conn1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="start" target="task_admin1" edge="1" />
+        <mxCell id="conn2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="task_admin1" target="task_admin2" edge="1" />
+        <mxCell id="conn3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="task_admin2" target="task_admin3" edge="1" />
+        <mxCell id="conn4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="task_admin3" target="gateway_admin" edge="1" />
+        <mxCell id="conn5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;exitX=1;exitY=0.5;" parent="1" source="gateway_admin" target="task_data1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="130" as="sourcePoint" />
+            <mxPoint x="100" y="200" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="640" y="150" />
+              <mxPoint x="640" y="210" />
+              <mxPoint x="100" y="210" />
+              <mxPoint x="100" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="task_data1" target="task_data2" edge="1" />
+        <mxCell id="conn7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="task_data2" target="task_data3" edge="1" />
+        <mxCell id="conn8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="task_data3" target="task_data4" edge="1" />
+        <mxCell id="conn9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="task_data4" target="gateway_data" edge="1" />
+        <mxCell id="conn10" value="Ошибка" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="gateway_data" target="event_data_error" edge="1" />
+        <mxCell id="conn11" value="Успех" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="gateway_data" target="event_data_ok" edge="1" />
+        <mxCell id="conn12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="event_data_error" target="task_data_correction" edge="1" />
+        <mxCell id="conn13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" target="task_data2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1410" y="390" />
+              <mxPoint x="355" y="390" />
+            </Array>
+            <mxPoint x="1410" y="370" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="event_data_ok" target="task_analyst1" edge="1" />
+        <mxCell id="conn15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="task_analyst1" target="task_analyst2" edge="1" />
+        <mxCell id="conn16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="task_analyst2" target="task_analyst3" edge="1" />
+        <mxCell id="conn17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="task_analyst3" target="task_analyst4" edge="1" />
+        <mxCell id="conn18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="task_analyst4" target="gateway_analyst" edge="1" />
+        <mxCell id="conn19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="gateway_analyst" target="task_editor1" edge="1" />
+        <mxCell id="conn20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="task_editor1" target="task_editor2" edge="1" />
+        <mxCell id="conn21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="task_editor2" target="task_editor3" edge="1" />
+        <mxCell id="conn22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="task_editor3" target="task_editor4" edge="1" />
+        <mxCell id="conn23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="task_editor4" target="task_it1" edge="1" />
+        <mxCell id="conn24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="task_it1" target="task_it2" edge="1" />
+        <mxCell id="conn25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="task_it2" target="task_it3" edge="1" />
+        <mxCell id="conn26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="task_it3" target="end" edge="1" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

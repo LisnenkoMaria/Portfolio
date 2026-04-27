@@ -1,0 +1,266 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
+  <diagram name="Страница 1" id="U2rqdlQw_1-5p0vQ0e7-">
+    <mxGraphModel dx="181330" dy="128177" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="diagram1_title" value="&lt;b&gt;Диаграмма 1: Подбор состава на матч&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="50" y="-90" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lane1_trener" value="&lt;b&gt;Тренер&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="-40" width="700" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lane1_trener" source="analiz1" target="ocenka1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="analiz1" value="Анализ статистики\nигроков" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane1_trener" vertex="1">
+          <mxGeometry x="20" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="start1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="lane1_trener" vertex="1">
+          <mxGeometry x="65" y="110" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="conn1" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane1_trener" source="start1" target="analiz1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="60" y="145" as="sourcePoint" />
+            <mxPoint x="110" y="95" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="lane1_trener" source="ocenka1" target="reshenie1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="lane1_trener" source="ocenka1" target="taktika1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ocenka1" value="Оценка текущей\nформы" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane1_trener" vertex="1">
+          <mxGeometry x="170" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn2" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane1_trener" source="analiz1" target="ocenka1" edge="1" />
+        <mxCell id="reshenie1" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="lane1_trener" vertex="1">
+          <mxGeometry x="205" y="110" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="taktika1" value="Учет тактики\nпротивника" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane1_trener" vertex="1">
+          <mxGeometry x="340" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn3" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane1_trener" source="ocenka1" target="taktika1" edge="1" />
+        <mxCell id="conn4" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane1_trener" source="taktika1" target="reshenie1" edge="1" />
+        <mxCell id="lane1_system" value="&lt;b&gt;Система&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="180" width="700" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lane1_system" source="formirovanie" target="utverzhdenie">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="formirovanie" value="Формирование\nстартового состава" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane1_system" vertex="1">
+          <mxGeometry x="30" y="30" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lane1_system" source="utverzhdenie">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="utverzhdenie" value="Утверждение\nсостава" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane1_system" vertex="1">
+          <mxGeometry x="244" y="30" width="146" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn9" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane1_system" source="formirovanie" target="utverzhdenie" edge="1" />
+        <mxCell id="end1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="lane1_system" vertex="1">
+          <mxGeometry x="420" y="35" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="conn10" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane1_system" source="utverzhdenie" target="end1" edge="1" />
+        <mxCell id="ataka" value="Выбор 7\nнападающих" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="620" y="70" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oborona" value="Выбор 5\nнападающих" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="620" y="120" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="conn5" value="атакующая" style="endArrow=classic;html=1;rounded=0;" parent="1" source="reshenie1" target="ataka" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="575" y="85" as="sourcePoint" />
+            <mxPoint x="620" y="85" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn6" value="оборонительная" style="endArrow=classic;html=1;rounded=0;" parent="1" source="reshenie1" target="oborona" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="575" y="135" as="sourcePoint" />
+            <mxPoint x="620" y="135" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn7" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="ataka" target="formirovanie" edge="1" />
+        <mxCell id="conn8" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="oborona" target="formirovanie" edge="1" />
+        <mxCell id="diagram2_title" value="&lt;b&gt;Диаграмма 2: Проведение тренировки&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="50" y="280" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2_trener" value="&lt;b&gt;Тренер&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="320" width="740" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="lane2_trener" source="start2" target="razminka">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="start2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="lane2_trener" vertex="1">
+          <mxGeometry x="55" y="110" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lane2_trener" source="razminka" target="broski">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="razminka" value="Разминка" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane2_trener" vertex="1">
+          <mxGeometry x="20" y="30" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn21" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane2_trener" source="start2" target="razminka" edge="1" />
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lane2_trener" source="broski" target="taktika2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="broski" value="Работа над\nбросками" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane2_trener" vertex="1">
+          <mxGeometry x="160" y="30" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn22" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane2_trener" source="razminka" target="broski" edge="1" />
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lane2_trener" source="taktika2" target="sila">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="taktika2" value="Тактические\nупражнения" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane2_trener" vertex="1">
+          <mxGeometry x="275" y="30" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn23" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane2_trener" source="broski" target="taktika2" edge="1" />
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lane2_trener" source="sila" target="analiz2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sila" value="Силовая\nподготовка" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane2_trener" vertex="1">
+          <mxGeometry x="440" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn24" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane2_trener" source="taktika2" target="sila" edge="1" />
+        <mxCell id="end2" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="lane2_trener" vertex="1">
+          <mxGeometry x="630" y="100" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lane2_trener" source="analiz2" target="end2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="analiz2" value="Анализ\nрезультатов" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane2_trener" vertex="1">
+          <mxGeometry x="580" y="30" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn25" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane2_trener" source="sila" target="analiz2" edge="1" />
+        <mxCell id="conn26" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane2_trener" source="analiz2" target="end2" edge="1" />
+        <mxCell id="lane2_igroki" value="&lt;b&gt;Игроки&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="470" width="700" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="diagram3_title" value="&lt;b&gt;Диаграмма 3: Анализ игровой статистики&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="50" y="540" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lane3_system" value="&lt;b&gt;Система&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="570" width="760" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="start3" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="lane3_system" vertex="1">
+          <mxGeometry x="30" y="130" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lane3_system" source="sbor" target="analiz_broskov">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sbor" value="Сбор данных\nматча" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane3_system" vertex="1">
+          <mxGeometry x="20" y="50" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn31" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane3_system" source="start3" target="sbor" edge="1" />
+        <mxCell id="analiz_broskov" value="Анализ бросков\nпо воротам" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane3_system" vertex="1">
+          <mxGeometry x="150" y="50" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn32" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane3_system" source="sbor" target="analiz_broskov" edge="1" />
+        <mxCell id="otsenka_peredach" value="Оценка эффективности\nпередач" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane3_system" vertex="1">
+          <mxGeometry x="310" y="50" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn33" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane3_system" source="analiz_broskov" target="otsenka_peredach" edge="1" />
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="lane3_system" source="analiz_broskov" target="otsenka_peredach">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lane3_system" source="sravnenie" target="otchet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sravnenie" value="Сравнение с\nпредыдущими играми" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane3_system" vertex="1">
+          <mxGeometry x="480" y="50" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn34" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane3_system" source="otsenka_peredach" target="sravnenie" edge="1" />
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="lane3_system" source="otsenka_peredach" target="sravnenie">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="lane3_system" source="otchet" target="end3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="otchet" value="Формирование\nотчета" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane3_system" vertex="1">
+          <mxGeometry x="630" y="50" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn35" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane3_system" source="sravnenie" target="otchet" edge="1" />
+        <mxCell id="end3" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="lane3_system" vertex="1">
+          <mxGeometry x="680" y="120" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="conn36" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane3_system" source="otchet" target="end3" edge="1" />
+        <mxCell id="diagram4_title" value="&lt;b&gt;Диаграмма 4: Замена игроков во время матча&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="50" y="770" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lane4_trener" value="&lt;b&gt;Тренер&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="811" width="700" height="229" as="geometry" />
+        </mxCell>
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="lane4_trener" source="start4" target="monitoring">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="start4" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="lane4_trener" vertex="1">
+          <mxGeometry x="20" y="119" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="monitoring" value="Мониторинг\nусталости игроков" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane4_trener" vertex="1">
+          <mxGeometry x="20" y="30" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn41" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane4_trener" source="start4" target="monitoring" edge="1" />
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lane4_trener" source="otsenka_scheta" target="analiz_taktiki">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lane4_trener" source="otsenka_scheta" target="reshenie4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="otsenka_scheta" value="Оценка\nтекущего счета" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane4_trener" vertex="1">
+          <mxGeometry x="200" y="30" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn42" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane4_trener" source="monitoring" target="otsenka_scheta" edge="1" />
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lane4_trener" source="monitoring" target="otsenka_scheta">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="analiz_taktiki" value="Анализ\nтактической ситуации" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane4_trener" vertex="1">
+          <mxGeometry x="340" y="30" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn43" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane4_trener" source="otsenka_scheta" target="analiz_taktiki" edge="1" />
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lane4_trener" source="reshenie4" target="zamena_ustal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="lane4_trener" source="reshenie4" target="zamena_taktika">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="lane4_trener" source="reshenie4" target="prodolzhenie">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="reshenie4" value="" style="rhombus;whiteSpace=wrap;html=1;" parent="lane4_trener" vertex="1">
+          <mxGeometry x="225" y="109" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="conn44" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane4_trener" source="analiz_taktiki" target="reshenie4" edge="1" />
+        <mxCell id="zamena_ustal" value="Замена\nигрока" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane4_trener" vertex="1">
+          <mxGeometry x="324" y="89" width="116" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="conn45" value="устал" style="endArrow=classic;html=1;rounded=0;" parent="lane4_trener" source="reshenie4" target="zamena_ustal" edge="1" />
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lane4_trener" source="zamena_taktika" target="instruktazh">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zamena_taktika" value="Замена\nигрока" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane4_trener" vertex="1">
+          <mxGeometry x="324" y="129" width="116" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="conn46" value="тактика" style="endArrow=classic;html=1;rounded=0;" parent="lane4_trener" source="reshenie4" target="zamena_taktika" edge="1" />
+        <mxCell id="prodolzhenie" value="Продолжение\nигры" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane4_trener" vertex="1">
+          <mxGeometry x="324" y="169" width="116" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="conn47" value="норма" style="endArrow=classic;html=1;rounded=0;" parent="lane4_trener" source="reshenie4" target="prodolzhenie" edge="1" />
+        <mxCell id="fJvalx0-uWcOtIM8BZKQ-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="lane4_trener" source="instruktazh" target="end4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="instruktazh" value="Инструктаж\nзаменяемого игрока" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane4_trener" vertex="1">
+          <mxGeometry x="480" y="124" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="conn48" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane4_trener" source="zamena_ustal" target="instruktazh" edge="1" />
+        <mxCell id="conn49" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane4_trener" source="zamena_taktika" target="instruktazh" edge="1" />
+        <mxCell id="end4" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="lane4_trener" vertex="1">
+          <mxGeometry x="610" y="59" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="conn50" value="" style="endArrow=classic;html=1;rounded=0;" parent="lane4_trener" source="instruktazh" target="end4" edge="1" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,156 @@
+  <diagram name="Уровень 1 - Декомпозиция" id="abc123">
+    <mxGraphModel dx="1642" dy="941" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Subprocesses -->
+        <mxCell id="2" value="Сбор статистики" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="3" value="Анализ эффективности" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="280" y="200" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="4" value="Планирование тренировок" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="480" y="200" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="5" value="Мониторинг здоровья" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="680" y="200" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Data Stores -->
+        <mxCell id="6" value="Профили нападающих" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="80" y="400" width="100" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="7" value="Игровая статистика" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="480" y="400" width="100" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="8" value="Медицинские данные" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="280" y="400" width="100" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- External Entities -->
+        <mxCell id="9" value="Нападающий" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="30" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="10" value="Тренерский штаб" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="100" width="30" height="60" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="11" value="Медицинский персонал" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="680" y="100" width="30" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Data Flows -->
+        <!-- Forward to Statistics Collection -->
+        <mxCell id="12" value="Данные матча" style="endArrow=classic;html=1;rounded=0;edgeStyle=elbowEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="9" target="2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="110" as="sourcePoint"/>
+            <mxPoint x="190" y="60" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Between processes -->
+        <mxCell id="13" value="Собранная статистика" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="230" as="sourcePoint"/>
+            <mxPoint x="280" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="14" value="Результаты анализа" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="230" as="sourcePoint"/>
+            <mxPoint x="480" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="15" value="План тренировок" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="4" target="5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="230" as="sourcePoint"/>
+            <mxPoint x="680" y="230" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- To/from Data Stores -->
+        <mxCell id="16" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="2" target="6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="260" as="sourcePoint"/>
+            <mxPoint x="130" y="400" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="17" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="2" target="7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="260" as="sourcePoint"/>
+            <mxPoint x="280" y="400" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="18" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="4" target="8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="260" as="sourcePoint"/>
+            <mxPoint x="530" y="400" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="19" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="8" target="4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="530" y="400" as="sourcePoint"/>
+            <mxPoint x="540" y="260" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- To/from External Entities -->
+        <mxCell id="20" value="Запрос анализа" style="endArrow=classic;html=1;rounded=0;edgeStyle=elbowEdgeStyle;" edge="1" parent="1" source="3" target="10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="200" as="sourcePoint"/>
+            <mxPoint x="295" y="160" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="21" value="Тактические рекомендации" style="endArrow=classic;html=1;rounded=0;edgeStyle=elbowEdgeStyle;" edge="1" parent="1" source="10" target="3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="295" y="160" as="sourcePoint"/>
+            <mxPoint x="340" y="200" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="22" value="Медицинский отчет" style="endArrow=classic;html=1;rounded=0;edgeStyle=elbowEdgeStyle;" edge="1" parent="1" source="5" target="11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="740" y="200" as="sourcePoint"/>
+            <mxPoint x="695" y="160" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="23" value="Рекомендации по здоровью" style="endArrow=classic;html=1;rounded=0;edgeStyle=elbowEdgeStyle;" edge="1" parent="1" source="11" target="5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="695" y="160" as="sourcePoint"/>
+            <mxPoint x="740" y="200" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Output to Forward -->
+        <mxCell id="24" value="Индивидуальный план" style="endArrow=classic;html=1;rounded=0;edgeStyle=elbowEdgeStyle;" edge="1" parent="1" source="2" target="9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="200" as="sourcePoint"/>
+            <mxPoint x="95" y="160" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="25" value="Тренировочные задания" style="endArrow=classic;html=1;rounded=0;edgeStyle=elbowEdgeStyle;" edge="1" parent="1" source="5" target="9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="740" y="230" as="sourcePoint"/>
+            <mxPoint x="95" y="160" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

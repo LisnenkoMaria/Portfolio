@@ -1,0 +1,97 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
+  <diagram name="Страница-1" id="2cc2d294-239d-4cc4-6463-4bc95c51c89c">
+    <mxGraphModel dx="1182" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="city" value="Город" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="160" height="180" as="geometry">
+            <mxRectangle x="40" y="40" width="160" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="city_attrs" value="- название: String&#xa;- население: int&#xa;&#xa;+ добавитьКоманду()&#xa;+ удалитьКоманду()" style="text;whiteSpace=wrap;html=1;align=left;" parent="city" vertex="1">
+          <mxGeometry y="30" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="team" value="Команда" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="40" width="160" height="180" as="geometry">
+            <mxRectangle x="280" y="40" width="160" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="team_attrs" value="- название: String&#xa;- годОснования: int&#xa;- тренер: String&#xa;&#xa;+ добавитьИгрока()&#xa;+ рассчитатьСтатистику()" style="text;whiteSpace=wrap;html=1;align=left;" parent="team" vertex="1">
+          <mxGeometry y="30" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="player" value="Хоккеист" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="280" width="160" height="210" as="geometry">
+            <mxRectangle x="40" y="280" width="160" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="player_attrs" value="- ФИО: String&#xa;- возраст: int&#xa;- амплуа: String&#xa;- номер: int&#xa;&#xa;+ обновитьСтатистику()&#xa;+ получитьРейтинг()" style="text;whiteSpace=wrap;html=1;align=left;" parent="player" vertex="1">
+          <mxGeometry y="30" width="160" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="forward" value="Нападающий" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="280" width="180" height="230" as="geometry">
+            <mxRectangle x="280" y="280" width="180" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="forward_attrs" value="- позиция: String&#xa;- силоваяБорьба: int&#xa;- точностьБроска: int&#xa;&#xa;+ забитьГол()&#xa;+ сделатьГолевуюПередачу()&#xa;+ рассчитатьЭффективность()" style="text;whiteSpace=wrap;html=1;align=left;" parent="forward" vertex="1">
+          <mxGeometry y="30" width="180" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="match" value="Матч" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="40" width="180" height="210" as="geometry">
+            <mxRectangle x="520" y="40" width="180" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="match_attrs" value="- дата: Date&#xa;- счет: String&#xa;- стадион: String&#xa;&#xa;+ начатьМатч()&#xa;+ завершитьМатч()&#xa;+ добавитьГол()" style="text;whiteSpace=wrap;html=1;align=left;" parent="match" vertex="1">
+          <mxGeometry y="30" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="goal" value="Гол" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="280" width="160" height="180" as="geometry">
+            <mxRectangle x="520" y="280" width="160" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="goal_attrs" value="- время: Time&#xa;- тип: String&#xa;- ассистент: String&#xa;&#xa;+ засчитатьГол()&#xa;+ отменитьГол()" style="text;whiteSpace=wrap;html=1;align=left;" parent="goal" vertex="1">
+          <mxGeometry y="30" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="link1" value="" style="endArrow=open;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;dashed=1;" parent="1" source="city" target="team" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="130" as="sourcePoint" />
+            <mxPoint x="290" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link2" value="" style="endArrow=open;html=1;rounded=0;exitX=0.5;exitY=1;entryX=0.25;entryY=0;dashed=1;" parent="1" source="team" target="player" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="220" as="sourcePoint" />
+            <mxPoint x="120" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link3" value="" style="endArrow=block;html=1;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="player" target="forward" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="385" as="sourcePoint" />
+            <mxPoint x="280" y="385" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link4" value="" style="endArrow=open;html=1;rounded=0;exitX=0;exitY=0.25;entryX=1;entryY=0.25;" parent="1" source="match" target="team" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="100" as="sourcePoint" />
+            <mxPoint x="440" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link6" value="" style="endArrow=open;html=1;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;dashed=1;" parent="1" source="match" target="goal" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="610" y="250" as="sourcePoint" />
+            <mxPoint x="600" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="link7" value="" style="endArrow=open;html=1;rounded=0;exitX=1;exitY=0.25;entryX=0;entryY=0.5;" parent="1" source="forward" target="goal" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="340" as="sourcePoint" />
+            <mxPoint x="520" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qJQTe_GGBS7yWvMMOJDp-4" value="&lt;ul style=&quot;margin: 16px 0px; padding-left: 18px; color: rgb(15, 17, 21); font-family: quote-cjk-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Oxygen, Ubuntu, Cantarell, &amp;quot;Open Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, sans-serif; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;&lt;li style=&quot;&quot;&gt;&lt;p style=&quot;margin-right: 0px; margin-bottom: 0px; margin-left: 0px; margin-top: 0px !important;&quot; class=&quot;ds-markdown-paragraph&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-weight: 600;&quot;&gt;─────────►&lt;/span&gt;&amp;nbsp;Наследование (сплошная линия с треугольной стрелкой)&lt;/font&gt;&lt;/p&gt;&lt;/li&gt;&lt;li style=&quot;margin-top: 6px;&quot;&gt;&lt;p style=&quot;margin-top: 0px !important; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;&quot; class=&quot;ds-markdown-paragraph&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-weight: 600;&quot;&gt;─ ─ ─ ─►&lt;/span&gt;&amp;nbsp;Агрегация (пунктирная линия с пустым ромбом)&lt;/font&gt;&lt;/p&gt;&lt;/li&gt;&lt;li style=&quot;margin-top: 6px;&quot;&gt;&lt;p style=&quot;margin-top: 0px !important; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;&quot; class=&quot;ds-markdown-paragraph&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-weight: 600;&quot;&gt;─ ─ ─ ─◆&lt;/span&gt;&amp;nbsp;Композиция (пунктирная линия с закрашенным ромбом)&lt;/font&gt;&lt;/p&gt;&lt;/li&gt;&lt;li style=&quot;margin-top: 6px;&quot;&gt;&lt;p style=&quot;margin-right: 0px; margin-bottom: 0px; margin-left: 0px; margin-top: 0px !important;&quot; class=&quot;ds-markdown-paragraph&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-weight: 600;&quot;&gt;─────────&lt;/span&gt;&amp;nbsp;Ассоциация (сплошная линия с обычной стрелкой)&lt;/font&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="560" width="400" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
