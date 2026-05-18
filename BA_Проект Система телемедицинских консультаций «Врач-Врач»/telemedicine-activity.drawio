@@ -1,0 +1,142 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
+  <diagram name="Activity Diagram" id="activity">
+    <mxGraphModel dx="510" dy="741" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lane1" value="Терапевт" style="swimlane;startSize=40;horizontal=0;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="30" y="80" width="380" height="750" as="geometry" />
+        </mxCell>
+        <mxCell id="start" value="" style="ellipse;shape=flowchart.start;fillColor=#000000;strokeColor=#000000;" parent="lane1" vertex="1">
+          <mxGeometry x="175" y="20" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="act2" value="Заполнить форму + прикрепить файлы" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane1" vertex="1">
+          <mxGeometry x="80" y="157.5" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="act3" value="Нажать Отправить" style="rounded=1;whiteSpace=wrap;html=1;" parent="lane1" vertex="1">
+          <mxGeometry x="80" y="230" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" parent="lane1" source="act2" target="act3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2" value="Система" style="swimlane;startSize=40;horizontal=0;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="410" y="80" width="380" height="750" as="geometry" />
+        </mxCell>
+        <mxCell id="decision" value="Все поля заполнены?" style="rhombus;whiteSpace=wrap;html=1;" parent="lane2" vertex="1">
+          <mxGeometry x="115" y="157.5" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="lane3" value="Врач-эксперт" style="swimlane;startSize=40;horizontal=0;fontSize=16;fontStyle=1;fontFamily=Times New Roman;" parent="1" vertex="1">
+          <mxGeometry x="790" y="80" width="380" height="750" as="geometry" />
+        </mxCell>
+        <mxCell id="act1" value="Выбрать эксперта из каталога" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="110" y="160" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="act4" value="Проверить обязательные поля" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="490" y="160" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="act5" value="Отправить запрос эксперту" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="490" y="360" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="act6" value="Установить статус Отправлен" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="490" y="440" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="act7" value="Отправить уведомление эксперту" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="490" y="520" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="act8" value="Открыть список запросов" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="870" y="160" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="act9" value="Выбрать запрос" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="870" y="250" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="act10" value="Изучить данные + файлы" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="870" y="340" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="act11" value="Дать заключение" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="870" y="430" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="act12" value="Нажать Отправить заключение" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="870" y="520" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="act13" value="Изменить статус на Закрыт" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="490" y="610" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="act14" value="Уведомить терапевта" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="490" y="690" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="end" value="" style="ellipse;shape=flowchart.end;fillColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="585" y="770" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" parent="1" source="start" target="act1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" parent="1" source="act1" target="act2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" parent="1" source="act3" target="act4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="330" />
+              <mxPoint x="510" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" parent="1" source="act4" target="decision" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_no" value="Нет" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeColor=#b85450;fontColor=#FF3333;fillColor=#f8cecc;gradientColor=#ea6b66;fontSize=16;strokeWidth=2;" parent="1" source="decision" target="act2" edge="1">
+          <mxGeometry x="0.0018" y="-15" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="275" />
+              <mxPoint x="390" y="275" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_yes" value="Да" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" parent="1" source="decision" target="act5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" parent="1" source="act5" target="act6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" parent="1" source="act6" target="act7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" parent="1" source="act7" target="act8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="730" y="542" />
+              <mxPoint x="850" y="542" />
+              <mxPoint x="850" y="182" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" parent="1" source="act8" target="act9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" parent="1" source="act9" target="act10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" parent="1" source="act10" target="act11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" parent="1" source="act11" target="act12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" parent="1" source="act12" target="act13" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="980" y="632" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" parent="1" source="act13" target="act14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;" parent="1" source="act14" target="end" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
